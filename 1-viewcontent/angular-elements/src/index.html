@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AngularElements</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <custom-hello name="John">
+    CONTENT!!!!
+  </custom-hello>
+
+  <script>
+    const el = document.querySelector('custom-hello');
+    setTimeout(_ => {
+      el.setAttribute('name', 'Alice');
+    }, 3000);
+
+    el.addEventListener('clicked', (event) => {
+      console.log(event.detail);
+    })
+    
+  </script>
+</body>
+</html>
