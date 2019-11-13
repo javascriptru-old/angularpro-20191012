@@ -8,7 +8,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', component: LazyComponent }
+      { path: '', component: LazyComponent },
+      { path: 'deeplazy', loadChildren: () => import('./deeplazy/deeplazy.module').then(m => m.DeeplazyModule) }
     ])
   ]
 })

@@ -6,7 +6,7 @@ import { Banner2Component } from '../banner2/banner2.component';
 
 @Component({
   selector: 'app-item',
-  template: `VIEW | <ng-content select="h1"></ng-content>
+  template: `VIEW | <ng-template select="h1"></ng-template>
   <ng-container *ngTemplateOutlet="mainTemaplte"></ng-container>
 
 
@@ -49,6 +49,7 @@ export class ItemComponent implements OnInit, AfterContentInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit');
+    console.log('---', this.mainTemaplte);
   }
 
 }
